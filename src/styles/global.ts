@@ -1,6 +1,15 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
+  :root {
+    --gray-50: #F8F9FE;
+    --gray-100: #E7E7E7;
+    --gray-300: #C1C1C1;
+    --gray-700: #5A5A5A;
+    --gray-800: #333333;
+    --blue: #065EDC;
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -24,12 +33,13 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: #333;
+    font-family: 'Inter', sans-serif;
+    background: var(--gray-50);
   }
 
-  body, input, textarea, button {
+  body, input, button {
     font-weight: 500;
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 
   h1,
@@ -39,14 +49,6 @@ export const GlobalStyles = createGlobalStyle`
   h5,
   h6 {
     font-weight: 600;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-  }
-  
-  h2 {
-    font-size: 2.2rem;
   }
 
   button {
