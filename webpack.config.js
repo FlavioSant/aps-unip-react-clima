@@ -3,9 +3,6 @@ const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const dotenv = require('dotenv-safe');
-
-const { required } = dotenv.config();
 
 const htmlPlugin = new HtmlWebpackPlugin({
   favicon: join(__dirname, 'public', 'favicon.ico'),
@@ -63,7 +60,6 @@ module.exports = {
         configFile: join(__dirname, 'tsconfig.json'),
       },
     }),
-    new webpack.EnvironmentPlugin(required),
   ].filter(Boolean),
 
   devServer: {

@@ -1,9 +1,15 @@
 import styled from 'styled-components';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+`;
 
 export const Form = styled.form`
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 1rem;
   max-width: 500px;
@@ -11,7 +17,7 @@ export const Form = styled.form`
 
   h2 {
     color: var(--gray-800);
-    margin: 3rem 0 2rem 0;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -29,9 +35,20 @@ export const Button = styled.button`
   font-weight: bold;
   padding: 0.8rem;
   transition: background 0.2s, color 0.2s;
+  width: 100%;
 
   &:hover {
     background: var(--blue);
     color: var(--gray-50);
+  }
+`;
+
+export const NoCity = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    color: var(--blue);
   }
 `;

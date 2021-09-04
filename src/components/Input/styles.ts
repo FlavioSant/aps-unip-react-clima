@@ -32,4 +32,8 @@ export const InputContainer = styled.section`
       color: var(--gray-300);
     }
   }
+
+  span {
+    color: var(--red);
+  }
 `;
