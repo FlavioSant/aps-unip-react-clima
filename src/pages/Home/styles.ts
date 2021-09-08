@@ -5,6 +5,13 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 1.5rem;
+  padding: 0 1rem;
+
+  @media (max-width: 425px) {
+    img {
+      width: 300px;
+    }
+  }
 `;
 
 export const Form = styled.form`

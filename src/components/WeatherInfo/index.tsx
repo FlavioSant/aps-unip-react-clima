@@ -1,4 +1,5 @@
 import windIcon from '../../assets/wind-icon.svg';
+import windIconWhite from '../../assets/wind-icon-white.svg';
 import cityIcon from '../../assets/city-building.svg';
 
 import { Weather } from '../../types/weather';
@@ -29,7 +30,10 @@ export const WeatherInfo: React.FC<WeatherProps> = ({ weather }) => (
         {weather.forecast.map((item, index) => (
           <div key={index}>
             <p>{item.temperature}</p>
-            <p>{item.wind}</p>
+            <p>
+              <img src={windIconWhite} alt="Vento" width={20} height={20} />
+              {item.wind}
+            </p>
           </div>
         ))}
       </ForecastContainer>

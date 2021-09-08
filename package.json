@@ -7,6 +7,7 @@
   "scripts": {
     "build": "set NODE_ENV=production&&webpack --mode production",
     "dev": "set NODE_ENV=development&&webpack serve --mode development",
+    "start": "npx serve build",
     "prepare": "husky install"
   },
   "dependencies": {

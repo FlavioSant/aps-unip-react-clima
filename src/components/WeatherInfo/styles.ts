@@ -43,5 +43,11 @@ export const ForecastContainer = styled.section`
     color: var(--gray-50);
     padding: 1rem 0.5rem;
     width: 100%;
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
   }
 `;

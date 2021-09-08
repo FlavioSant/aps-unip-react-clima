@@ -20,11 +20,21 @@ const Home: React.FC = () => {
       e.preventDefault();
       setError('');
 
+      if (city === '') return;
+
       try {
         const { data } = await axios.get(
           `https://goweather.herokuapp.com/weather/${city}`,
         );
-        setWeather({ ...data, city: city });
+
+        const { temperature, wind, description, forecast } = data;
+
+        if (temperature === '' || wind === '' || description === '') {
+          setError('Cidade não encontrada...');
+          return;
+        }
+
+        setWeather({ description, forecast, temperature, wind, city: city });
       } catch (err) {
         setError('Cidade não encontrada, digite uma cidade válida.');
         console.error(err);
@@ -47,7 +57,9 @@ const Home: React.FC = () => {
           onChange={e => setCity(e.target.value)}
           errorMessage={error}
         />
-        <Button type="submit">Buscar</Button>
+        <Button type="submit" title="Clique para buscar a cidade">
+          Buscar
+        </Button>
       </Form>
 
       {weather ? (
