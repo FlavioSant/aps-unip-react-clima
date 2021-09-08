@@ -44,7 +44,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [React](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Weather-api](https://github.com/robertoduessmann/weather-api/blob/master/model/weather.go)
+- [Weather-api](https://github.com/robertoduessmann/weather-api)
 
 ## 📄 Licença
 
