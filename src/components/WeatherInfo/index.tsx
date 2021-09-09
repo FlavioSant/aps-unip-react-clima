@@ -15,12 +15,12 @@ export const WeatherInfo: React.FC<WeatherProps> = ({ weather }) => (
     <h1>{weather.temperature}</h1>
 
     <div>
-      <img src={cityIcon} alt="Cidade" width={28} height={28} />
+      <img src={cityIcon} alt="Cidade" />
       <h3>{weather.city}</h3>
     </div>
 
     <div>
-      <img src={windIcon} alt="Vento" width={28} height={28} />
+      <img src={windIcon} alt="Vento" />
       <h3>{weather.wind}</h3>
     </div>
 
@@ -29,11 +29,11 @@ export const WeatherInfo: React.FC<WeatherProps> = ({ weather }) => (
       <ForecastContainer>
         {weather.forecast.map((item, index) => (
           <div key={index}>
-            <p>{item.temperature}</p>
-            <p>
-              <img src={windIconWhite} alt="Vento" width={20} height={20} />
+            <h3>{item.temperature}</h3>
+            <span>
+              <img src={windIconWhite} alt="Vento" />
               {item.wind}
-            </p>
+            </span>
           </div>
         ))}
       </ForecastContainer>

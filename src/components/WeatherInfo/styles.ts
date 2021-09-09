@@ -17,6 +17,11 @@ export const WeatherContainer = styled.section`
     h3 {
       text-transform: capitalize;
     }
+
+    img {
+      width: 28px;
+      height: 28px;
+    }
   }
 
   article {
@@ -28,7 +33,7 @@ export const WeatherContainer = styled.section`
   }
 `;
 
-export const ForecastContainer = styled.section`
+export const ForecastContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -36,6 +41,7 @@ export const ForecastContainer = styled.section`
 
   div {
     display: flex;
+    align-items: center;
     flex-direction: column;
     background: var(--blue);
     border-radius: 8px;
@@ -44,10 +50,19 @@ export const ForecastContainer = styled.section`
     padding: 1rem 0.5rem;
     width: 100%;
 
-    p {
+    span {
       display: flex;
       align-items: center;
       gap: 0.3rem;
     }
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    flex-wrap: wrap;
   }
 `;
